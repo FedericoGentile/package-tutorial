@@ -17,6 +17,13 @@ result = distance(40, -80, 35, -120, Deg_Rad='Deg', Km_Ft_NM='NM')
 
 Expected result: **1912.2 NM**.
 
+## Developing
+To install geolib, along with the tools you need to develop and run tests, run the 
+following in your virtual environment:
+```sh
+pip install geolib[dev]
+```
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 

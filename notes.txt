@@ -35,17 +35,34 @@ in root folder run
 	
 create LICENSE
 
-CREATE README.md
+CREATE README.md and README.rst
 
 create pyproject.toml file
 
-create setup.cfg
+create setup.cfg and setup.py
 
 install package 
 	pip install -e .
 	
 remove path lines from test files and test again
 	pytest
+	
+test and make sure that everything is ok
+
+uninstall package and delete all egg folders
+
+install package and create build folder
+	pip install .
+	
+create a dist file
+	python setup.py sdist
+	
+create wheel file
+	pip install wheel
+	python setup.py bdist_wheel
+	
+check all files in dist are ok
+	twine check dist/*
 	
 
 https://github.com/pytest-dev/pytest/issues/2421
