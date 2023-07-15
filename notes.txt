@@ -1,0 +1,53 @@
+virtual environment
+
+create src
+
+create src/package_name
+
+add in src/package_name
+	__init__.py
+	main.py
+	utils
+
+add in src/package_name/utils
+	__init__.py
+	utily.py
+	
+call the functions inside of all the __init__.py files (ex: from .main import ....)
+
+call the utils function from main.py using relative path (ex: from .utils import ...)
+
+create test
+
+add in test
+	__init__.py
+	test_main.py
+	test_utils.py
+	
+in test files add
+	import os
+	import sys
+	sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+	sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/geolib')))
+	
+in root folder run
+	pytest
+	
+create LICENSE
+
+CREATE README.md
+
+create pyproject.toml file
+
+create setup.cfg
+
+install package 
+	pip install -e .
+	
+remove path lines from test files and test again
+	pytest
+	
+
+https://github.com/pytest-dev/pytest/issues/2421
+
+https://choosealicense.com/licenses/mit/#
