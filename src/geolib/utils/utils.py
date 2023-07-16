@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def convert_coordinates(lat_a, lon_a, lat_b, lon_b, Deg_Rad):
     """
     Convert latitude and longitude coordinates from degrees to radians (or vice versa).
@@ -29,9 +30,10 @@ def convert_coordinates(lat_a, lon_a, lat_b, lon_b, Deg_Rad):
         pass
     else:
         raise Exception("Deg_Rad must be either 'Deg' or 'Rad'.")
-        
+
     return lat_a, lon_a, lat_b, lon_b
-    
+
+
 def convert_distance(d, Km_Ft_NM):
     """
     Convert a distance value from kilometers to feet or nautical miles.
@@ -46,7 +48,7 @@ def convert_distance(d, Km_Ft_NM):
 
     Raises:
         Exception: If Km_Ft_NM is not set to either 'Km', 'Ft', or 'NM'.
-    """    
+    """
     if Km_Ft_NM == 'Ft':
         d = d*3280.84
     elif Km_Ft_NM == 'NM':
@@ -55,5 +57,5 @@ def convert_distance(d, Km_Ft_NM):
         pass
     else:
         raise Exception("Km_Ft_NM must be either 'Km', 'Ft' or 'NM'.")
-        
+
     return d

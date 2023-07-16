@@ -1,15 +1,14 @@
-import os
-import sys
-#sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-#sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/geolib')))
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/geolib')))
 
 from src.geolib.utils.utils import (
     convert_coordinates,
     convert_distance
 )
-
-import numpy as np
 import unittest
+
 
 class CoordinateConversionTests(unittest.TestCase):
     def test_convert_coordinates_deg_to_rad(self):
@@ -30,6 +29,7 @@ class CoordinateConversionTests(unittest.TestCase):
         with self.assertRaises(Exception):
             convert_coordinates(40, -80, 35, -120, Deg_Rad='InvalidUnit')
 
+
 class DistanceConversionTests(unittest.TestCase):
     def test_convert_distance_km_to_ft(self):
         result = convert_distance(10, Km_Ft_NM='Ft')
@@ -46,6 +46,7 @@ class DistanceConversionTests(unittest.TestCase):
     def test_convert_distance_invalid_unit(self):
         with self.assertRaises(Exception):
             convert_distance(10, Km_Ft_NM='InvalidUnit')
+
 
 if __name__ == '__main__':
     unittest.main()

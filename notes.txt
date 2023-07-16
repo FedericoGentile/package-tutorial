@@ -64,6 +64,19 @@ create wheel file
 check all files in dist are ok
 	twine check dist/*
 	
+add requirements.txt (not necessary but good practice)
+	pip freeze > requirements.txt
+	
+add requirements_dev.txt (not necessary but good for devs)
+update dev in setup.cfg
+
+add flake8 options in setuup.cfg
+	max-line-length = 160
+	
+check python coding standards
+	flake8 src
+	flake8 test
+	
 
 https://github.com/pytest-dev/pytest/issues/2421
 
