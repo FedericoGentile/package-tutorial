@@ -77,6 +77,9 @@ check python coding standards
 	flake8 src
 	flake8 test
 	
+install tox to check that the package works in specified python versions
+	pip install tox
+	tox
 
 https://github.com/pytest-dev/pytest/issues/2421
 
